@@ -1,2 +1,4 @@
 node_modules/
 .env
+controllers/info.json
+views/divAds.html
