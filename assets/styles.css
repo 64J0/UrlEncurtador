@@ -1,0 +1,30 @@
+div.container {
+  max-width: 750px;
+  height: 600px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  border-right: 7px solid #aaa;
+  border-bottom: 7px solid #aaa;
+}
+
+div.container h1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+button {
+  width: 150px;
+}
+
+div#results input#input-results {
+  border: none;
+}
+
+footer {
+  margin-top: 35%;
+}
