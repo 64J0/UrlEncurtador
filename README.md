@@ -2,6 +2,11 @@
 
 Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB, baseado <a href="https://www.youtube.com/watch?v=SLpUKAGnm-g">nese vídeo</a> do canal Web Dev Simplified.
 
+### Melhorias:
+
+* Melhorar o layout;
+* Completar automaticamente o link com https://www.
+
 ### Funcionamento:
 No site, o usuário entra com um link em um campo input e o sistema gera um id relacionado a esse link, salvando o id e o link original no banco de dados (MongoDB Atlas). Para recuperar o link completo, foi criada uma rota no Express que recebe um parâmetro da requisição e faz a busca no banco de dados por um id igual ao informado na Url. Caso encontre, o usuário é redirecionado para o site correspondente armazenado neste banco de dados.
 
