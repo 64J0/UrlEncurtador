@@ -23,8 +23,21 @@ button {
 
 div#results input#input-results {
   border: none;
+  margin-bottom: 10px;
+}
+
+div#results {
+  align-items: center;
+}
+
+div.ads {
+  display: block;
+  margin-top: 40px;
+  min-width: 300px;
+  min-height: 300px;
+  border: 1px solid red;
 }
 
 footer {
-  margin-top: 35%;
+  margin-top: 20px;
 }

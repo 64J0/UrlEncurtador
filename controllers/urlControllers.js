@@ -10,7 +10,10 @@ let dataExample = {
 
 // GET Url
 exports.getUrl = (req, res) => {
-  return res.status(200).render('index', { newUrl: dataExample });
+  return res
+    .status(200)
+    .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+    .render('index', { newUrl: dataExample });
 }
 
 // POST Url
@@ -20,7 +23,10 @@ exports.postUrl = async (req, res) => {
 
   if (foundOne) {
     foundOne.shortUrl = info.baseUrl + foundOne.shortUrl;
-    return res.status(200).render('index', { newUrl: foundOne });
+    return res
+      .status(200)
+      .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+      .render('index', { newUrl: foundOne });
   }
 
   const newUrl = new Url({
@@ -31,7 +37,10 @@ exports.postUrl = async (req, res) => {
 
   await newUrl.save();
   newUrl.shortUrl = info.baseUrl + newUrl.shortUrl;
-  return res.status(200).render('index', { newUrl: newUrl });
+  return res
+    .status(200)
+    .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+    .render('index', { newUrl: newUrl });
 }
 
 // GET Short Url from DB
@@ -41,6 +50,14 @@ exports.getShortUrl = async (req, res) => {
   const response = await Url.findOne({ shortUrl });
   //console.log(response.fullUrl);
 
-  if (response) return res.status(200).redirect(response.fullUrl);
-  return res.status(404).redirect('/');
+  if (response) {
+    return res
+    .status(200)
+    .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+    .redirect(response.fullUrl);
+  }
+  return res
+    .status(404)
+    .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+    .redirect('/');
 }

@@ -32,7 +32,10 @@ mongoose.connect(
 const db = mongoose.connection;
 db.on('connected', () => {
   console.log('Mongoose default connection is on.')
-})
+});
+db.on('error', (error) => {
+  console.log({ 'Error': error });
+});
 
 // Rotas:
 require('./models/Url');
@@ -44,7 +47,7 @@ app.get('/*', (req, res) => {
 });
 
 // Porta e inicialização do servidor:
-const port = process.env.POT || 5000;
+const port = (process.env.PORT || 5000);
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`)
 });

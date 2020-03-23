@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node server.js",
     "devStart": "nodemon server.js"
   },
   "keywords": [],
