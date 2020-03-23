@@ -5,7 +5,9 @@ Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB,
 ### Melhorias:
 
 * Melhorar o layout;
-* Completar automaticamente o link com https://www.
+* Completar automaticamente o link com https://www;
+* Conseguir um certificado para o link do site ficar https (ssl, openssl, lets encrypt);
+* Entender porque os ads do google não são mostrados.
 
 ### Funcionamento:
 No site, o usuário entra com um link em um campo input e o sistema gera um id relacionado a esse link, salvando o id e o link original no banco de dados (MongoDB Atlas). Para recuperar o link completo, foi criada uma rota no Express que recebe um parâmetro da requisição e faz a busca no banco de dados por um id igual ao informado na Url. Caso encontre, o usuário é redirecionado para o site correspondente armazenado neste banco de dados.
