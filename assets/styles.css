@@ -1,35 +1,126 @@
+html, body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*=================================
+  GLOBAL
+=================================*/
+input {
+  margin: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 150px;
+  height: 33px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  transition: background-color .5s;
+  color: #f7f7f7;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+
+/*=================================
+  DIV.CONTAINER
+=================================*/
 div.container {
-  max-width: 750px;
-  height: 600px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 42px 42px 316px 100px;
+  max-width: 700px;
+  width: 90%;
+  min-width: 500px;
+  max-height: 600px;
+  margin: 40px;
+  padding: 40px;
+  background-color: #fff;
   border: 2px solid #ddd;
   border-radius: 15px;
   border-right: 7px solid #aaa;
   border-bottom: 7px solid #aaa;
 }
 
+
+/*=================================
+  H1
+=================================*/
 div.container h1 {
-  display: flex;
-  justify-content: center;
+  justify-self: center;
   padding-bottom: 50px;
+  font-size: 38px;
 }
 
-button {
-  width: 150px;
-}
 
-div#results input#input-results {
-  border: none;
-  margin-bottom: 10px;
-}
-
-div#results {
+/*=================================
+  FORM
+=================================*/
+form {
+  display: flex;
   align-items: center;
 }
 
+form label {
+  display: none;
+}
+
+form input {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  flex: 1;
+  color: #333;
+}
+
+form button {
+  background-color: #0275d8;
+}
+
+form button:hover {
+  background-color: #48a1bd;
+}
+
+
+/*=================================
+  DIV#RESULTS
+=================================*/
+div#results {
+  display: flex;
+  align-items: center;
+}
+
+div#results input {
+  border: none;
+  flex: 1;
+  padding: 5px;
+  color: #666;
+}
+
+div#results button {
+  background-color: #339633;
+}
+
+div#results button:hover {
+  background-color: #5cb85c;
+}
+
+
+/*=================================
+  DIV.ADS
+=================================*/
 div.ads {
   display: block;
   margin-top: 40px;
@@ -38,6 +129,17 @@ div.ads {
   border: 1px solid red;
 }
 
+
+/*=================================
+  FOOTER
+=================================*/
 footer {
-  margin-top: 20px;
+  align-self: end;
+  justify-self: center;
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0275d8;
 }
