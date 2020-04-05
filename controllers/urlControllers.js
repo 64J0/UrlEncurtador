@@ -1,11 +1,11 @@
-const info = require('./info.json');
-const mongoose = require('mongoose');
-const Url = mongoose.model('UrlSchema');
+const info = require("../utils/info.json");
+const mongoose = require("mongoose");
+const Url = mongoose.model("UrlSchema");
 
 let dataExample = {
   fullUrl: "",
   shortUrl: "Resultado...",
-  clicks: 0
+  clicks: 0,
 };
 
 // GET Url
@@ -13,8 +13,8 @@ exports.getUrl = (req, res) => {
   return res
     .status(200)
     .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
-    .render('index', { newUrl: dataExample });
-}
+    .render("index", { newUrl: dataExample });
+};
 
 // POST Url
 exports.postUrl = async (req, res) => {
@@ -26,13 +26,13 @@ exports.postUrl = async (req, res) => {
     return res
       .status(200)
       .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
-      .render('index', { newUrl: foundOne });
+      .render("index", { newUrl: foundOne });
   }
 
   const newUrl = new Url({
     fullUrl: fullUrl,
     shortUrl: Date.now().toString(16),
-    clicks: 0
+    clicks: 0,
   });
 
   await newUrl.save();
@@ -40,8 +40,8 @@ exports.postUrl = async (req, res) => {
   return res
     .status(200)
     .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
-    .render('index', { newUrl: newUrl });
-}
+    .render("index", { newUrl: newUrl });
+};
 
 // GET Short Url from DB
 exports.getShortUrl = async (req, res) => {
@@ -52,12 +52,12 @@ exports.getShortUrl = async (req, res) => {
 
   if (response) {
     return res
-    .status(200)
-    .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
-    .redirect(response.fullUrl);
+      .status(200)
+      .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
+      .redirect(response.fullUrl);
   }
   return res
     .status(404)
     .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
-    .redirect('/');
-}
+    .redirect("/");
+};

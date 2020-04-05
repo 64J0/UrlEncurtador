@@ -1,21 +1,21 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let UrlSchema = new Schema({
   fullUrl: {
     type: String,
-    required: true
+    required: true,
   },
   shortUrl: {
     type: String,
-    required: true
+    required: true,
   },
   clicksCount: {
     type: Number,
     required: true,
-    default: 0
-  }
+    default: 0,
+  },
 });
 
 // mongoose.model(modelName, schema)
-module.exports = mongoose.model('UrlSchema', UrlSchema);
+module.exports = mongoose.model("UrlSchema", UrlSchema);
