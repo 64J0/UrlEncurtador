@@ -26,4 +26,10 @@ Feito isso, devemos navegar até a pasta do projeto no prompt de comando e execu
 npm run devStart
 ~~~
 
+<hr>
+
+Atualmente o layout do arquivo está desse jeito:
+
+ ![Imagem mostrando o layout atual do projeto](https://github.com/64J0/UrlEncurtador/blob/master/assets-github/screenshot.png)
+
 <i>Vinícius Gajo Marques Oliveira</i>, 2020.
