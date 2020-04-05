@@ -5,6 +5,8 @@ Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB,
 ### Melhorias:
 
 * Melhorar o layout;
+  * Adicionar a opção de Night Mode (referência: <a href="https://willianjusten.com.br/adicionando-night-mode-no-seu-site/">link</a>);
+  * Adicionar um menu lateral com dados das minhas redes sociais (referência: <a href="https://willianjusten.com.br/menu-sticky-e-smooth-scroll-com-css-puro/">link</a>);
 * Completar automaticamente o link com https://www;
 * Conseguir um certificado para o link do site ficar https (ssl, openssl, lets encrypt);
 * Entender porque os ads do google não são mostrados.
