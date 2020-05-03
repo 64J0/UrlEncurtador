@@ -27,7 +27,19 @@ Nesse projeto foi utilizado o padrão <strong>MVC</strong> (<i>Model, View, Cont
 
 O banco de dados escolhido foi o <strong>MongoDB</strong> devido à familiaridade e facilidade de implementação. O backend foi desenvolvido no <strong>Node.js</strong> com <strong>Express</strong>, e a parte do layout, foi escolhido utilizar o <strong>EJS</strong> (<i>Effective JavaScript templating</i>).
 
-Para executar o projeto basta ter o <strong>node</strong> instalado, fazer um clone desse repositório para uma pasta e alterar os valores da <i>connection string</i> no arquivo <i>.env</i>, e da <i>baseUrl</i> em <i>controllers/info.json</i> para <i>http://localhost:5000/</i>.
+### Como executar:
+
+Para executar o projeto basta ter o <strong>node</strong> instalado, fazer um clone desse repositório para uma pasta qualquer, ir até a pasta que foi criada com os arquivos do projeto e executar um <i>npm install</i> para instalar as dependências (<i>node_modules</i>).
+
+```bash
+  $ git clone https://github.com/64J0/UrlEncurtador
+  $ cd urlEncurtador/
+  $ npm install
+```
+
+Dentro dos arquivos do projeto também é necessário realizar algumas alterações. São elas:
+1. alterar os valores da <i>connection string</i> no arquivo <i>.env</i>.
+2. mudar a <i>baseUrl</i> em <i>controllers/info.json</i> para <i>http://localhost:5000/</i>.
 
 Feito isso, devemos navegar até a pasta do projeto no prompt de comando e executar:
 
@@ -35,10 +47,8 @@ Feito isso, devemos navegar até a pasta do projeto no prompt de comando e execu
   $ npm run devStart
 ```
 
-<hr>
-
 Atualmente o layout do arquivo está desse jeito:
 
 ![Imagem mostrando o layout atual do projeto](https://github.com/64J0/UrlEncurtador/blob/master/assets-github/screenshot.png)
 
-<i>Vinícius Gajo Marques Oliveira</i>, 2020.
+Vinícius Gajo Marques Oliveira, 2020.
