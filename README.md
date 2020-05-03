@@ -3,7 +3,7 @@
 Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB, baseado <a href="https://www.youtube.com/watch?v=SLpUKAGnm-g">neste vídeo</a> do canal Web Dev Simplified. Nesse projeto foi possível estudar a arquitetura **MVC** e a sintaxe do **EJS**.
 
 <h1 align="center">
-  <img src="assets-github/UrlEncurtadorPreview.gif" alt="Gif mostrando o funcionamento do sistema.">
+  <img src="assets-github/urlEncurtadorPreview.gif" alt="Gif mostrando o funcionamento do sistema.">
 </h1>
 
 Para acessar o site basta clicar no seguinte link: [Encurtador de links](http://urlcurto.appspot.com/).
