@@ -5,7 +5,7 @@ import path from "path";
 import Database from "./db";
 
 // Banco de dados MongoDB:
-require("./models/Url");
+import "./models/Url";
 
 const db = new Database();
 db.init();
@@ -15,15 +15,16 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({}));
 app.use(morgan("dev"));
+
 const assetsPath = path.resolve(__dirname, "../assets");
 app.use(express.static(assetsPath));
-const viewsPath = path.resolve(__dirname, "../views");
+
+const viewsPath = path.resolve(__dirname, "./views");
 app.set("views", viewsPath);
 app.set("view engine", "ejs");
 
 // Rotas:
-const urlRouter = require("./routes/index");
-
+import urlRouter from "./routes";
 app.use("/", urlRouter);
 
 // Porta e inicialização do servidor:

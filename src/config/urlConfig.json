@@ -1,0 +1,4 @@
+{
+  "baseUrlDev": "localhost:5000/",
+  "baseUrlProd": "urlcurto.appspot.com/"
+}

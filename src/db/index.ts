@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import path from "path";
 import dotenv from "dotenv";
 
-import IDatabase from "../@types/idatabase";
+import IDatabase from "../@types/iDatabase";
 
 dotenv.config({
   path: path.resolve(__dirname, "../../.env"),

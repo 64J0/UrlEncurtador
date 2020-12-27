@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-let Schema = mongoose.Schema;
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
-let UrlSchema = new Schema({
+const UrlSchema = new Schema({
   fullUrl: {
     type: String,
     required: true,

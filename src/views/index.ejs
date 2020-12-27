@@ -14,47 +14,33 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="/icons8-fita-de-bookmark-64.png"
+      href="/images/icons8-fita-de-bookmark-64.png"
     />
     <link rel="stylesheet" type="text/css" href="/styles.css" />
     <link rel="stylesheet" type="text/css" href="/aside.css" />
     <title>Encurtador de URL</title>
 
-    <!-- Google ADSense -->
-    <script
-      data-ad-client="ca-pub-7002120987757314"
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
     <!-- Menu lateral -->
     <aside class="menu">
       <menu>
         <a href="https://github.com/64J0">
-          <center>
-            <img src="/github-black.png" alt="Github logo image" />
-          </center>
+          <i data-feather="github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/vin%C3%ADcius-gajo-416121146/">
-          <center>
-            <img src="/linkedin.png" alt="LinkedIn logo image" />
-          </center>
+        <a href="https://www.linkedin.com/in/vinicius-gajo/">
+          <i data-feather="linkedin"></i>
         </a>
         <a href="https://www.facebook.com/vinicius.nevermind">
-          <center>
-            <img src="/facebook.png" alt="Facebook logo image" />
-          </center>
+          <i data-feather="facebook"></i>
         </a>
-        <a href="https://www.instagram.com/viniciusgaio/">
-          <center>
-            <img src="/instagram.png" alt="instagram logo image" />
-          </center>
+        <a href="https://www.instagram.com/viniciusgajo/">
+          <i data-feather="instagram"></i>
         </a>
-        <a href="https://twitter.com/VdeVin1cius">
-          <center>
-            <img src="/twitter.png" alt="Twitter logo image" />
-          </center>
+        <a href="https://twitter.com/viniciusgajo">
+          <i data-feather="twitter"></i>
         </a>
       </menu>
     </aside>
@@ -73,8 +59,8 @@
         />
         <button type="submit" class="btn btn-primary">Encurtar</button>
       </form>
+
       <div id="results" class="visible form-inline">
-        <%= //fragment %>
         <input
           id="input-results"
           class="form-control col mr-2"
@@ -87,33 +73,13 @@
         >
           Copiar!
         </button>
-        <br />
-      </div>
-
-      <!-- Google ADSense -->
-      <div class="ads" style="min-width: 300px; min-height: 300px;">
-        <p><small>Ads</small></p>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
-        <!-- Ads-UrlShortner -->
-        <ins
-          class="adsbygoogle"
-          style="display: block;"
-          data-ad-client="ca-pub-7002120987757314"
-          data-ad-slot="5826335037"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
       </div>
 
       <footer>
-        <strong>Code:</strong>
-        <a href="https://github.com/64J0/UrlEncurtador">GitHub</a>
+        <strong>Código do projeto:</strong>
+        <a href="https://github.com/64J0/UrlEncurtador">
+          <i data-feather="file-text"></i>
+        </a>
       </footer>
     </div>
 
@@ -128,6 +94,9 @@
 
         document.execCommand("copy");
       }
+
+      // Para o feather-icons funcionar
+      feather.replace();
     </script>
   </body>
 </html>

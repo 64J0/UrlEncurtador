@@ -48,7 +48,7 @@ Dentro dos arquivos do projeto também é necessário realizar algumas alteraç�
 Feito isso, devemos navegar até a pasta do projeto no prompt de comando e executar:
 
 ```bash
-  $ npm run devStart
+  $ npm run dev
 ```
 
 Atualmente o layout do arquivo está desse jeito:

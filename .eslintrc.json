@@ -22,7 +22,7 @@
     },
     "settings": {
         "import/extensions": {
-            "extensions": [".js", ".ts"]
+            "extensions": [".js", ".ts", ".ejs"]
         }
     }
 }
