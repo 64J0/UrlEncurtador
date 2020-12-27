@@ -1,11 +1,9 @@
 aside {
   z-index: 100;
   width: 120px;
-  margin: 0 10px;
+  margin: 12px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
+  text-align: center;
 }
 
 aside menu {
@@ -25,4 +23,16 @@ aside menu a {
 aside menu a img {
   width: 35px;
   height: 35px;
+}
+
+@media(max-width: 1000px) {
+  aside {
+    width: 400px;
+  }
+
+  aside menu {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px;
+  }
 }

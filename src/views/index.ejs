@@ -16,7 +16,8 @@
       type="image/x-icon"
       href="/images/icons8-fita-de-bookmark-64.png"
     />
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link rel="stylesheet" type="text/css" href="/main.css" />
     <link rel="stylesheet" type="text/css" href="/aside.css" />
     <title>Encurtador de URL</title>
 
@@ -24,7 +25,6 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
-    <!-- Menu lateral -->
     <aside class="menu">
       <menu>
         <a href="https://github.com/64J0">
@@ -45,7 +45,7 @@
       </menu>
     </aside>
 
-    <div class="container">
+    <main>
       <h1>Encurtador de URL</h1>
       <form action="" method="POST" class="my-4 form-inline">
         <label for="fullUrl" class="sr-only">URL</label>
@@ -75,13 +75,17 @@
         </button>
       </div>
 
+      <div id="illustration">
+        <img src="images/Cityscapes - Downtown.png" alt="Ilustração para deixar o site mais bonito">
+      </div>
+
       <footer>
         <strong>Código do projeto:</strong>
         <a href="https://github.com/64J0/UrlEncurtador">
           <i data-feather="file-text"></i>
         </a>
       </footer>
-    </div>
+    </main>
 
     <!-- Função para copiar o conteúdo do input -->
     <script>

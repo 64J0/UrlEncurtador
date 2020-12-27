@@ -22,6 +22,7 @@ Para acessar o site basta clicar no seguinte link: [Encurtador de links](http://
 - Completar automaticamente o link com https://www;
 - Conseguir um certificado para o link do site ficar https (ssl, openssl, lets encrypt);
 - Entender porque os ads do google não são mostrados.
+- Subir o projeto no Heroku.
 
 ### Funcionamento:
 
