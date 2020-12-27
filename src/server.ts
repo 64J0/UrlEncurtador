@@ -1,13 +1,14 @@
-"use strict";
-
-const express = require("express");
-const cors = require("cors");
-const morgan = require("morgan");
-const path = require("path");
+import express from "express";
+import cors from "cors";
+import morgan from "morgan";
+import path from "path";
+import Database from "./db";
 
 // Banco de dados MongoDB:
-require("../models/Url");
-require("../db");
+require("./models/Url");
+
+const db = new Database();
+db.init();
 
 // Configurações do Express:
 const app = express();
@@ -21,12 +22,13 @@ app.set("views", viewsPath);
 app.set("view engine", "ejs");
 
 // Rotas:
-let urlRouter = require("../routes/index");
+const urlRouter = require("./routes/index");
+
 app.use("/", urlRouter);
 
 // Porta e inicialização do servidor:
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  port === 5000 ? console.log(`Server running on port ${port}.`) : null;
+  console.log(`Server running on port ${port}.`);
 });

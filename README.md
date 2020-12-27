@@ -1,6 +1,10 @@
 # Encurtador de URLs
 
-Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB, baseado <a href="https://www.youtube.com/watch?v=SLpUKAGnm-g">neste vídeo</a> do canal Web Dev Simplified. Nesse projeto foi possível estudar a arquitetura **MVC** e a sintaxe do **EJS**.
+Esse projeto consiste em um encurtador de links genérico desenvolvido para WEB, baseado <a href="https://www.youtube.com/watch?v=SLpUKAGnm-g">neste vídeo</a> do canal Web Dev Simplified. Nesse projeto foi possível estudar a arquitetura **MVC** e a sintaxe do **EJS** para criar templates de maneira simples que podem ser enviados para o browser do usuário.
+
+O objetivo ao desenvolver este projeto foi apenas estudar alguns conceitos ligados ao *back-end* com Node.js. Busquei aplicar boas práticas e separar ao máximo possível os conceitos.
+
+Ainda estou implementando os testes automatizados e integrando com Typescript o código, seguindo o tutorial mostrado na referência [1].
 
 <h1 align="center">
   <img src="assets-github/urlEncurtadorPreview.gif" alt="Gif mostrando o funcionamento do sistema.">
@@ -50,5 +54,10 @@ Feito isso, devemos navegar até a pasta do projeto no prompt de comando e execu
 Atualmente o layout do arquivo está desse jeito:
 
 ![Imagem mostrando o layout atual do projeto](https://github.com/64J0/UrlEncurtador/blob/master/assets-github/screenshot.png)
+
+---
+## Referências:
+
+[1] - [How to Setup a TypeScript + Node.js Project](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
 
 Vinícius Gajo Marques Oliveira, 2020.
