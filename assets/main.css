@@ -9,13 +9,14 @@ main {
   background-color: #fff;
   border-radius: 15px;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0 4px 4px rgba(0, 0, 238, 0.5);
+  /* box-shadow: 0 0 4px 4px rgba(0, 0, 238, 0.5); */
 }
 
 main h1 {
   text-align: center;
   padding-bottom: 20px;
   font-size: 38px;
+  opacity: 0.8;
 }
 
 main form {

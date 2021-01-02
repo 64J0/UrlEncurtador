@@ -25,25 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
-    <aside class="menu">
-      <menu>
-        <a href="https://github.com/64J0">
-          <i data-feather="github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/vinicius-gajo/">
-          <i data-feather="linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/vinicius.nevermind">
-          <i data-feather="facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/viniciusgajo/">
-          <i data-feather="instagram"></i>
-        </a>
-        <a href="https://twitter.com/viniciusgajo">
-          <i data-feather="twitter"></i>
-        </a>
-      </menu>
-    </aside>
+    <%- include('fragments/aside'); %>
 
     <main>
       <h1>Encurtador de URL</h1>
@@ -60,7 +42,7 @@
         <button type="submit" class="btn btn-primary">Encurtar</button>
       </form>
 
-      <div id="results" class="visible form-inline">
+      <div id="results">
         <input
           id="input-results"
           class="form-control col mr-2"
@@ -79,12 +61,7 @@
         <img src="images/Cityscapes - Downtown.png" alt="Ilustração para deixar o site mais bonito">
       </div>
 
-      <footer>
-        <strong>Código do projeto:</strong>
-        <a href="https://github.com/64J0/UrlEncurtador">
-          <i data-feather="file-text"></i>
-        </a>
-      </footer>
+      <%- include('fragments/footer'); %>
     </main>
 
     <!-- Função para copiar o conteúdo do input -->
