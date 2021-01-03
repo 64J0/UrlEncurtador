@@ -2,14 +2,16 @@ import mongoose from "mongoose";
 import { Request, Response } from "express";
 
 import urlConfig from "../config/urlConfig.json";
-
-import IUrlController, { IInitialData } from '../@types/iUrlControllers';
-import IUrlConfig from '../@types/iUrlConfig';
-import IUrl from '../@types/iUrl';
+import {
+  IUrl,
+  IUrlConfig,
+  IUrlControllers,
+  IInitialData,
+} from '../@types';
 
 const Url = mongoose.model<IUrl>("UrlSchema");
 
-class UrlControllers implements IUrlController {
+class UrlControllers implements IUrlControllers {
   initialData: IInitialData;
   urlConfig: IUrlConfig;
 
@@ -33,14 +35,16 @@ class UrlControllers implements IUrlController {
   postUrl = async (req: Request, res: Response) => {
     const { origin } = req.headers;
     const { fullUrl } = req.body;
-    const foundOne = await Url.findOne({ fullUrl });
-
     let baseUrl = this.urlConfig.baseUrlProd;
 
     if (origin) {
-      baseUrl = /localhost/g.test(origin) ? this.urlConfig.baseUrlDev : this.urlConfig.baseUrlProd;
+      baseUrl = /localhost/g.test(origin) ? 
+      this.urlConfig.baseUrlDev : 
+      this.urlConfig.baseUrlProd;
     }
-  
+    
+    const foundOne = await Url.findOne({ fullUrl });
+
     if (foundOne) {
       foundOne.shortUrl = baseUrl + foundOne.shortUrl;
       return res
@@ -57,6 +61,7 @@ class UrlControllers implements IUrlController {
   
     await newUrl.save();
     newUrl.shortUrl = baseUrl + newUrl.shortUrl;
+
     return res
       .status(200)
       .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
@@ -73,6 +78,7 @@ class UrlControllers implements IUrlController {
         .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
         .redirect(response.fullUrl);
     }
+
     return res
       .status(404)
       .append("Set-Cookie", "HttpOnly;Secure;SameSite=None")
