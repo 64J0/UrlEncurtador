@@ -15,6 +15,8 @@ const UrlSchema = new Schema({
     required: true,
     default: 0,
   },
+}, {
+  collection: "encurt_urls"
 });
 
 // mongoose.model(modelName, schema)

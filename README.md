@@ -10,7 +10,7 @@ Busquei aplicar boas práticas e separar ao máximo possível os conceitos e com
 
 A primeira versão do projeto foi feita totalmente com *JavaScript* e sem testes. Na nova versão estou utilizando *TypeScript* em partes que podem aproveitar suas funcionalidades e aplicando testes automatizados com o *Jest*.
 
-O deploy da aplicação foi feito no *Heroku* e para acessá-la basta seguir o site: [Encurtador de links](http://urlcurto.appspot.com/).
+O deploy da aplicação foi feito no *Heroku* e para acessá-la basta seguir o site: [Encurtador de links](https://encurt.herokuapp.com/).
 
 ### Como executar:
 

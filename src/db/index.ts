@@ -10,7 +10,12 @@ dotenv.config({
 
 class Database implements IDatabase {
   init() {
-    mongoose.connect(process.env.DB_CONNECTION_STRING, {
+    const isProd = process.env.EXEC_ENV === "prod";
+    const connectionString  = isProd ? 
+      process.env.DB_CONNECTION_STRING_PROD : 
+      process.env.DB_CONNECTION_STRING;
+
+    mongoose.connect(connectionString, {
       useNewUrlParser: true,
       useFindAndModify: false,
       useCreateIndex: true,
