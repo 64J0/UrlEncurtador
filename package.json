@@ -1,12 +1,12 @@
 {
-  "name": "url-shortener-youtube",
-  "version": "1.0.1",
-  "description": "Encurtador de URL básico.",
-  "main": "dist/src/server.js",
+  "name": "url-encurtador",
+  "version": "1.0.2",
+  "description": "Encurtador de URL com Node.js, MongoDB e TypeScript.",
+  "main": "dist/server.js",
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --no-notify src/server.ts",
-    "start": "node dist/src/server.js",
+    "start": "node dist/server.js",
     "test": "jest"
   },
   "keywords": [],
@@ -42,5 +42,8 @@
     "ts-node-dev": "^1.1.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
+  },
+  "engines": {
+    "node": "14.15.1"
   }
 }
