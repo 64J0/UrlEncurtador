@@ -7,7 +7,7 @@ export interface IInitialData {
   clicks: number;
 }
 
-interface IUrlControllers {
+interface IUrlController {
   initialData: IInitialData;
   urlConfig: IUrlConfig;
   getUrl: (req: Request, res: Response) => void;
@@ -15,4 +15,4 @@ interface IUrlControllers {
   getShortUrl: (req: Request, res: Response) => Promise<void>;
 }
 
-export default IUrlControllers;
+export default IUrlController;

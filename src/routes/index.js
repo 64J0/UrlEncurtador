@@ -1,8 +1,8 @@
 import express from "express";
 const router = express.Router();
 
-import UrlControllers from "../controllers/urlControllers";
-const urlController = new UrlControllers();
+import UrlController from "../controllers/UrlController";
+const urlController = new UrlController();
 
 router.get("/", urlController.getUrl);
 router.post("/", urlController.postUrl);

@@ -1,5 +1,6 @@
 interface IDatabase {
-  init: Function<void>;
+  _connect: Function<void>;
+  _logMessages: Function<void>;
 }
 
 export default IDatabase;

@@ -7,8 +7,7 @@ import Database from "./db";
 // Banco de dados MongoDB:
 import "./models/Url";
 
-const db = new Database();
-db.init();
+new Database();
 
 // Configurações do Express:
 const app = express();

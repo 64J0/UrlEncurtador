@@ -1,12 +1,12 @@
 import IDatabase from './iDatabase';
 import IUrl from './iUrl';
 import IUrlConfig from './iUrlConfig';
-import IUrlControllers, { IInitialData } from './iUrlControllers';
+import IUrlController, { IInitialData } from './iUrlController';
 
 export {
   IDatabase,
   IUrl,
   IUrlConfig,
-  IUrlControllers,
+  IUrlController,
   IInitialData
 };

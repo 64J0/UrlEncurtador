@@ -9,27 +9,42 @@ dotenv.config({
 });
 
 class Database implements IDatabase {
-  init() {
+  constructor() {
+    this._connect();
+    this._logMessages();
+  }
+
+  _connect() {
     const isProd = process.env.EXEC_ENV === "prod";
     const connectionString  = isProd ? 
       process.env.DB_CONNECTION_STRING_PROD : 
       process.env.DB_CONNECTION_STRING;
 
     mongoose.connect(connectionString, {
-      useNewUrlParser: true,
-      useFindAndModify: false,
-      useCreateIndex: true,
-      useUnifiedTopology: true,
-    });
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        autoIndex: false,
+        serverSelectionTimeoutMS: 10 * 1000, // 10 s
+      }).catch(err => {
+        console.error(`Error in initial connection to MongoDB. More info: \n${err}`);
+      });
+  }
 
+  _logMessages() {
     const db = mongoose.connection;
 
     db.on("connected", () => {
-      console.log("Mongoose default connection is on.");
+      console.log("Mongoose default connection is open.");
+    });
+
+    db.on("disconnected", () => {
+      console.log("Mongoose default connection is closed.");
     });
 
     db.on("error", (error) => {
-      console.log({ Error: error });
+      console.error(`Error after initial connection to MongoDB has been established. More info: \n${error}`);
     });
   }
 }

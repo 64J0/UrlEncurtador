@@ -5,13 +5,13 @@ import urlConfig from "../config/urlConfig.json";
 import {
   IUrl,
   IUrlConfig,
-  IUrlControllers,
+  IUrlController,
   IInitialData,
 } from '../@types';
 
 const Url = mongoose.model<IUrl>("UrlSchema");
 
-class UrlControllers implements IUrlControllers {
+class UrlController implements IUrlController {
   initialData: IInitialData;
   urlConfig: IUrlConfig;
 
@@ -86,4 +86,4 @@ class UrlControllers implements IUrlControllers {
   };
 }
 
-export default UrlControllers;
+export default UrlController;

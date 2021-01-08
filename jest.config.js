@@ -8,6 +8,9 @@ module.exports = {
       prefix: "<rootDir>",
     }
   ),
+  testMatch: [
+    "**/__tests__/controllers/*.spec.[jt]s"
+  ],
   preset: "ts-jest",
   testEnvironment: "node",
 };
